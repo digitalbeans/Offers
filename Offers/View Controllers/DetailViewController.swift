@@ -117,9 +117,6 @@ class DetailViewController: UIViewController {
 			})
 			
 			button.widthAnchor.constraint(equalToConstant: 25).isActive = true
-		
-			view.setNeedsLayout()
-			view.layoutIfNeeded()
 		}
 	}
 	
