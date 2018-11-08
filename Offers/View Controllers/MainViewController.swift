@@ -16,6 +16,10 @@ class MainViewController: UIViewController {
 	private var offers: [Offer]?
 	private var isFiltered = false
 	
+	override var preferredStatusBarStyle : UIStatusBarStyle {
+		return .lightContent
+	}
+
 	override func viewDidLoad() {
 		
         super.viewDidLoad()
@@ -66,7 +70,7 @@ class MainViewController: UIViewController {
 		
 		// Add filter button
 		let filterButton = UIBarButtonItem(title: Constants.ButtonText.filter, style: .plain, target: self, action: #selector(handleFilter(sender:)))
-		filterButton.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.avenirNextDemiBold(ofSize: 20.0)], for: .normal)
+		filterButton.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.avenirNextDemiBold(ofSize: 20.0)], for: .normal)
 		navigationItem.rightBarButtonItem = filterButton
 	}
 	

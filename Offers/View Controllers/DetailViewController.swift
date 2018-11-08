@@ -31,6 +31,10 @@ class DetailViewController: UIViewController {
 	private let addImage: UIImage? = UIImage(named: Constants.Image.addButton)
 	private let deleteImage: UIImage? = UIImage(named: Constants.Image.deleteButton)
 	
+	override var preferredStatusBarStyle : UIStatusBarStyle {
+		return .lightContent
+	}
+
     override func viewDidLoad() {
 		
         super.viewDidLoad()
