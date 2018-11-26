@@ -10,7 +10,7 @@ import UIKit
 
 // Delegate protocol for observers to be notified when an offer is liked
 
-protocol DidLikeOfferProtocol {
+protocol DidLikeOfferProtocol: class {
 	
 	func didLikeOffer()
 }
@@ -19,7 +19,7 @@ protocol DidLikeOfferProtocol {
 class DetailViewController: UIViewController {
 	
 	var offer: Offer?
-	var likeDelegate: DidLikeOfferProtocol?
+	weak var likeDelegate: DidLikeOfferProtocol?
 	private var nameLabel: UILabel?
 	private var descriptionLabel: UILabel?
 	private var termsLabel: UILabel?
